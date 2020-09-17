@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover .\EvenCheck.Tests\"
+                sh "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover ./EvenCheck.Tests/"
             
             }
         }
@@ -24,7 +24,7 @@ pipeline {
                 withSonarQubeEnv('SonarQube') {
                   
                     sh "dotnet build-server shutdown"
-                    sh """dotnet sonarScanner begin /k:EvenCheck /d:sonar.host.url=http://localhost:9000 /d:sonar.cs.opencover.reportsPaths="\EvenCheck.tests\coverage.opencover.xml" /d:sonar.coverage.exclusions="**Test*.cs"""
+                    sh """dotnet sonarScanner begin /k:EvenCheck /d:sonar.host.url=http://localhost:9000 /d:sonar.cs.opencover.reportsPaths="./EvenCheck.tests/coverage.opencover.xml" /d:sonar.coverage.exclusions="**Test*.cs"""
                     sh "dotnet build Solution.sln"
                     sh """dotnet sonarScanner end"""
                     
