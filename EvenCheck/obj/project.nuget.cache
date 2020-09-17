@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "lpjCTCqQ6kcGYFyh6mUe1PAJMdLbkbtixtMSWqYfh2aAccrMi2gHdvV83C/Ne6yGC4Qtkh/d3wyAPCfagxN6gA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\miljolly\\Desktop\\Sapient_Courses-master\\seconddotnetproject\\EvenCheck\\EvenCheck.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\miljolly\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\miljolly\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
