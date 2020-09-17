@@ -1,10 +1,12 @@
 pipeline { 
     agent any
     stages {
+        stage('Source'){
+            git url: 'https://github.com/mijo2/seconddotnetproject.git', branch: 'master',
+                    credentialsId: 'github-mijo'
+        }
         stage('Preparation') {
             steps {
-                git url: 'https://github.com/mijo2/seconddotnetproject.git', branch: 'master',
-                    credentialsId: 'github-mijo'
                 checkout scm
             }
         }
