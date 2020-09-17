@@ -1,7 +1,7 @@
 pipeline { 
     agent any
     environment{
-        dotnet ='C:\\Program Files (x86)\\dotnet\\'
+        dotnet ='C:/Program Files (x86)/dotnet/'
     }
     stages {
         stage('Preparation') {
@@ -11,12 +11,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat "dotnet build Solution.sln"
+                sh "dotnet build Solution.sln"
             }
         }
         stage('Test') {
             steps {
-                bat "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover .\\EvenCheck.Tests\\"
+                sh "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover ./EvenCheck.Tests/"
             
             }
         }
@@ -24,10 +24,10 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarQube') {
                   
-                    bat "dotnet build-server shutdown"
-                    bat """dotnet sonarScanner begin /k:EvenCheck /d:sonar.host.url=http://localhost:9000 /d:sonar.cs.opencover.reportsPaths=".\\EvenCheck.tests\\coverage.opencover.xml" /d:sonar.coverage.exclusions="**Test*.cs"""
-                    bat "dotnet build Solution.sln"
-                    bat """dotnet sonarScanner end"""
+                    sh "dotnet build-server shutdown"
+                    sh """dotnet sonarScanner begin /k:EvenCheck /d:sonar.host.url=http://localhost:9000 /d:sonar.cs.opencover.reportsPaths="./EvenCheck.tests/coverage.opencover.xml" /d:sonar.coverage.exclusions="**Test*.cs"""
+                    sh "dotnet build Solution.sln"
+                    sh """dotnet sonarScanner end"""
                     
                 }
             }
@@ -41,12 +41,12 @@ pipeline {
         }
         // stage('Run') {
             // steps {
-                // bat "C:/Users/satvats2/Documents/Assignment/FirstCoreProject/bin/Debug/netcoreapp3.1/FirstCoreProject.exe"
+                // sh "C:/Users/satvats2/Documents/Assignment/FirstCoreProject/bin/Debug/netcoreapp3.1/FirstCoreProject.exe"
             // }
         // }
         stage('Publish'){
             steps{
-                bat "dotnet publish"
+                sh "dotnet publish"
             }
         }
        // stage('deploy') {  
