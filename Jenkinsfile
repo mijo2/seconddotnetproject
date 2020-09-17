@@ -1,7 +1,7 @@
 pipeline { 
     agent {
         docker {
-            image 'burakince/docker-dotnet-sonarscanner'
+            image 'nosinovacao/dotnet-sonar'
         }
     }
     stages {
