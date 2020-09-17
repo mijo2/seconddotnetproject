@@ -1,7 +1,9 @@
 pipeline { 
     agent any
     environment{
-        dotnet ='C:\Program Files\dotnet\'
+        docker {
+            image 'nosinovacao/dotnet-sonar:20.07.0'
+        } 
     }
     stages {
         stage('Preparation') {
