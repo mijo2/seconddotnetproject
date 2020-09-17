@@ -1,8 +1,7 @@
 pipeline { 
-    agent {
-        docker {
-            image 'nosinovacao/dotnet-sonar'
-        }
+    agent any
+    environment{
+        PATH = "C:\\WINDOWS\\SYSTEM32"
     }
     stages {
         stage('Preparation') {
