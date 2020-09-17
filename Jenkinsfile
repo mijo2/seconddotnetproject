@@ -1,9 +1,11 @@
 pipeline { 
-    agent any
-    environment{
+    agent {        
         docker {
             image 'nosinovacao/dotnet-sonar:20.07.0'
         } 
+    }
+    environment{
+        HOME = '/tmp'
     }
     stages {
         stage('Preparation') {
