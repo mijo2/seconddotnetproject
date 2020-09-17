@@ -11,12 +11,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "dotnet build Solution.sln"
+                bat "dotnet build Solution.sln"
             }
         }
         stage('Test') {
             steps {
-                sh "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover ./EvenCheck.Tests/"
+                bat "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover ./EvenCheck.Tests/"
             
             }
         }
@@ -24,10 +24,10 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarQube') {
                   
-                    sh "dotnet build-server shutdown"
-                    sh """dotnet sonarScanner begin /k:EvenCheck /d:sonar.host.url=http://localhost:9000 /d:sonar.cs.opencover.reportsPaths="./EvenCheck.tests/coverage.opencover.xml" /d:sonar.coverage.exclusions="**Test*.cs"""
-                    sh "dotnet build Solution.sln"
-                    sh """dotnet sonarScanner end"""
+                    bat "dotnet build-server shutdown"
+                    bat """dotnet sonarScanner begin /k:EvenCheck /d:sonar.host.url=http://localhost:9000 /d:sonar.cs.opencover.reportsPaths="./EvenCheck.tests/coverage.opencover.xml" /d:sonar.coverage.exclusions="**Test*.cs"""
+                    bat "dotnet build Solution.sln"
+                    bat """dotnet sonarScanner end"""
                     
                 }
             }
@@ -46,7 +46,7 @@ pipeline {
         // }
         stage('Publish'){
             steps{
-                sh "dotnet publish"
+                bat "dotnet publish"
             }
         }
        // stage('deploy') {  
