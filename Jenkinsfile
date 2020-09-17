@@ -4,7 +4,7 @@ pipeline {
         stage('Preparation') {
             steps {
                 git url: 'https://github.com/mijo2/seconddotnetproject.git', branch: 'master',
-                    CredentialsId: 'github-mijo'
+                    credentialsId: 'github-mijo'
                 checkout scm
             }
         }
