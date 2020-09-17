@@ -1,7 +1,7 @@
 pipeline { 
     agent any
     environment{
-        PATH = "C:\\WINDOWS\\SYSTEM32"
+        dotnet ='C:\\Program Files (x86)\\dotnet\\'
     }
     stages {
         stage('Preparation') {
@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover ./EvenCheck.Tests/"
+                bat "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover .\\EvenCheck.Tests\\"
             
             }
         }
@@ -25,7 +25,7 @@ pipeline {
                 withSonarQubeEnv('SonarQube') {
                   
                     bat "dotnet build-server shutdown"
-                    bat """dotnet sonarScanner begin /k:EvenCheck /d:sonar.host.url=http://localhost:9000 /d:sonar.cs.opencover.reportsPaths="./EvenCheck.tests/coverage.opencover.xml" /d:sonar.coverage.exclusions="**Test*.cs"""
+                    bat """dotnet sonarScanner begin /k:EvenCheck /d:sonar.host.url=http://localhost:9000 /d:sonar.cs.opencover.reportsPaths=".\\EvenCheck.tests\\coverage.opencover.xml" /d:sonar.coverage.exclusions="**Test*.cs"""
                     bat "dotnet build Solution.sln"
                     bat """dotnet sonarScanner end"""
                     
