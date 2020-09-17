@@ -36,11 +36,11 @@ pipeline {
               }
             }
         }
-        stage('Run') {
-            steps {
+        // stage('Run') {
+            // steps {
                 // bat "C:/Users/satvats2/Documents/Assignment/FirstCoreProject/bin/Debug/netcoreapp3.1/FirstCoreProject.exe"
-            }
-        }
+            // }
+        // }
         stage('Publish'){
             steps{
                 sh "dotnet publish"
