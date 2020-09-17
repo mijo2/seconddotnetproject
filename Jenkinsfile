@@ -3,6 +3,8 @@ pipeline {
     stages {
         stage('Preparation') {
             steps {
+                git url: 'https://github.com/mijo2/seconddotnetproject.git', branch: 'master',
+                    CredentialsId: 'github-mijo'
                 checkout scm
             }
         }
@@ -13,7 +15,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover"
+                bat "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover .\EvenCheck.Tests\"
             
             }
         }
@@ -22,9 +24,9 @@ pipeline {
                 withSonarQubeEnv('SonarQube') {
                   
                     bat "dotnet build-server shutdown"
-                    bat """dotnet SonarScanner begin /k:FirstCoreProject /d:sonar.host.url=http://localhost:9000 /d:sonar.login="281243b63f4bbdb26279805981a46de5f034634b" /d:sonar.cs.opencover.reportsPaths="FirstCoreProject/coverage.opencover.xml" /d:sonar.coverage.exclusions="**Test*.cs"""
-                    bat "dotnet build FirstSolution.sln"
-                    bat """dotnet SonarScanner end /d:sonar.login="281243b63f4bbdb26279805981a46de5f034634b"""
+                    bat """dotnet sonarScanner begin /k:EvenCheck /d:sonar.host.url=http://localhost:9000 /d:sonar.cs.opencover.reportsPaths="\EvenCheck.tests\coverage.opencover.xml" /d:sonar.coverage.exclusions="**Test*.cs"""
+                    bat "dotnet build Solution.sln"
+                    bat """dotnet sonarScanner end"""
                     
                 }
             }
@@ -38,7 +40,7 @@ pipeline {
         }
         stage('Run') {
             steps {
-                bat "C:/Users/satvats2/Documents/Assignment/FirstCoreProject/bin/Debug/netcoreapp3.1/FirstCoreProject.exe"
+                // bat "C:/Users/satvats2/Documents/Assignment/FirstCoreProject/bin/Debug/netcoreapp3.1/FirstCoreProject.exe"
             }
         }
         stage('Publish'){

@@ -12,6 +12,7 @@
           "MSBuild.SonarQube.Runner.Tool": "4.8.0",
           "Microsoft.NET.Test.Sdk": "16.5.0",
           "Microsoft.TestPlatform.TestHost": "16.7.1",
+          "coverlet.msbuild": "2.9.0",
           "xunit": "2.4.0",
           "xunit.runner.visualstudio": "2.4.0"
         },
@@ -19,6 +20,7 @@
           "EvenCheck.Tests.dll": {}
         }
       },
+      "coverlet.msbuild/2.9.0": {},
       "Microsoft.CodeCoverage/16.5.0": {
         "runtime": {
           "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
@@ -702,6 +704,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "coverlet.msbuild/2.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-t+2du2q+z0FFklyP6HGSoKssRj0NequInLvgQ9rtxHskbgmAENxgt83eTQSRyxJ8DAThW8WOYhOuhuXIs//ZyA==",
+      "path": "coverlet.msbuild/2.9.0",
+      "hashPath": "coverlet.msbuild.2.9.0.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/16.5.0": {
       "type": "package",

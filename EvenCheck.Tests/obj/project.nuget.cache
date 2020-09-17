@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YCMuWFbGGJYDbhQtlB/yuJZjkA6W8uCO8qlA+o4xtQcJ0fAm4I94iLdTmdo1Oten0yQ3ntDdwDkpw+pw6AKN4A==",
+  "dgSpecHash": "g0prFRZNPyuc3+VK6sPjW7x2PSTcYjZ7F3selEQLl1WHrpKEF7NXeT+LJEyXOhlSt6uhDKZjICCRPqDFW34lNw==",
   "success": true,
   "projectFilePath": "C:\\Users\\miljolly\\Desktop\\Sapient_Courses-master\\seconddotnetproject\\EvenCheck.Tests\\EvenCheck.Tests.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\miljolly\\.nuget\\packages\\coverlet.msbuild\\2.9.0\\coverlet.msbuild.2.9.0.nupkg.sha512",
     "C:\\Users\\miljolly\\.nuget\\packages\\microsoft.codecoverage\\16.5.0\\microsoft.codecoverage.16.5.0.nupkg.sha512",
     "C:\\Users\\miljolly\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\miljolly\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
