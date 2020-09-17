@@ -1,5 +1,9 @@
 pipeline { 
-    agent any
+    agent {
+        docker {
+            image 'burakince/docker-dotnet-sonarscanner'
+        }
+    }
     stages {
         stage('Preparation') {
             steps {
