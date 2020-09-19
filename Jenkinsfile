@@ -24,7 +24,7 @@ pipeline {
                     bat "dotnet build-server shutdown"
                     bat """dotnet sonarScanner begin /k:EvenCheck /d:sonar.host.url=http://localhost:9000 /d:sonar.cs.opencover.reportsPaths="./EvenCheck.tests/coverage.opencover.xml" /d:sonar.login="9a7d44bd8e34829c6e5e9ab35a2ad6613da4f21c" /d:sonar.coverage.exclusions="**Test*.cs"""
                     bat "dotnet build Solution.sln"
-                    bat """dotnet sonarScanner end /d:sonar.login="9a7d44bd8e34829c6e5e9ab35a2ad6613da4f21c""""
+                    bat """dotnet sonarScanner end /d:sonar.login="9a7d44bd8e34829c6e5e9ab35a2ad6613da4f21c""" // Works with one quote out
                     
                 }
             }
