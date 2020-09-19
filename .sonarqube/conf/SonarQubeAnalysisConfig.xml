@@ -4,7 +4,7 @@
   <SonarOutputDir>C:\Users\miljolly\Desktop\Sapient_Courses-master\seconddotnetproject\.sonarqube\out</SonarOutputDir>
   <SonarBinDir>C:\Users\miljolly\Desktop\Sapient_Courses-master\seconddotnetproject\.sonarqube\bin</SonarBinDir>
   <SonarScannerWorkingDirectory>C:\Users\miljolly\Desktop\Sapient_Courses-master\seconddotnetproject</SonarScannerWorkingDirectory>
-  <HasBeginStepCommandLineCredentials>false</HasBeginStepCommandLineCredentials>
+  <HasBeginStepCommandLineCredentials>true</HasBeginStepCommandLineCredentials>
   <SonarQubeHostUrl>http://localhost:9000</SonarQubeHostUrl>
   <SonarQubeVersion>8.4.2.36762</SonarQubeVersion>
   <SonarProjectKey>EvenCheck</SonarProjectKey>
@@ -101,9 +101,9 @@
     <Property Name="sonar.core.startTime">9/16/2020 9:25:57 PM</Property>
   </ServerSettings>
   <LocalSettings>
-    <Property Name="sonar.host.url">http://localhost:9000</Property>
-    <Property Name="sonar.cs.opencover.reportsPaths">./EvenCheck.tests/coverage.opencover.xml</Property>
     <Property Name="sonar.coverage.exclusions">**Test*.cs</Property>
+    <Property Name="sonar.cs.opencover.reportsPaths">./EvenCheck.tests/coverage.opencover.xml</Property>
+    <Property Name="sonar.host.url">http://localhost:9000</Property>
   </LocalSettings>
   <AnalyzersSettings>
     <AnalyzerSettings>
