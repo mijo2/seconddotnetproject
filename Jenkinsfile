@@ -1,12 +1,5 @@
 pipeline { 
-    agent {        
-        docker {
-            image 'nosinovacao/dotnet-sonar:20.07.0'
-        } 
-    }
-    environment{
-        HOME = '/tmp'
-    }
+    agent any
     stages {
         stage('Preparation') {
             steps {
@@ -15,12 +8,12 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh "dotnet build Solution.sln"
+                bat "dotnet build Solution.sln"
             }
         }
         stage('Test') {
             steps {
-                sh "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover ./EvenCheck.Tests/"
+                bat "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover ./EvenCheck.Tests/"
             
             }
         }
@@ -28,10 +21,10 @@ pipeline {
             steps {
                 withSonarQubeEnv('SonarQube') {
                   
-                    sh "dotnet build-server shutdown"
-                    sh """dotnet sonarScanner begin /k:EvenCheck /d:sonar.host.url=http://localhost:9000 /d:sonar.cs.opencover.reportsPaths="./EvenCheck.tests/coverage.opencover.xml" /d:sonar.coverage.exclusions="**Test*.cs"""
-                    sh "dotnet build Solution.sln"
-                    sh """dotnet sonarScanner end"""
+                    bat "dotnet build-server shutdown"
+                    bat """dotnet sonarScanner begin /k:EvenCheck /d:sonar.host.url=http://localhost:9000 /d:sonar.cs.opencover.reportsPaths="./EvenCheck.tests/coverage.opencover.xml" /d:sonar.login="9a7d44bd8e34829c6e5e9ab35a2ad6613da4f21c" /d:sonar.coverage.exclusions="**Test*.cs"""
+                    bat "dotnet build Solution.sln"
+                    bat """dotnet sonarScanner end /d:sonar.login="9a7d44bd8e34829c6e5e9ab35a2ad6613da4f21c""""
                     
                 }
             }
@@ -45,17 +38,17 @@ pipeline {
         }
         // stage('Run') {
             // steps {
-                // sh "C:/Users/satvats2/Documents/Assignment/FirstCoreProject/bin/Debug/netcoreapp3.1/FirstCoreProject.exe"
+                // bat "C:/Users/satvats2/Documents/Assignment/FirstCoreProject/bin/Debug/netcoreapp3.1/FirstCoreProject.exe"
             // }
         // }
         stage('Publish'){
             steps{
-                sh "dotnet publish"
+                bat "dotnet publish"
             }
         }
        // stage('deploy') {  
-       //    sh """azureWebAppPublish azureCredentialsId: params.azure_cred_id,  
-       //     resourceGroup: params.res_group, appName: params.globalPipelineDemo, sourceDirectory: "globalPipelineDemo/globalPipelineDemo/bin/Release/netcoreapp3.1/publish/""""  
+       //    bat """azureWebAppPublibat azureCredentialsId: params.azure_cred_id,  
+       //     resourceGroup: params.res_group, appName: params.globalPipelineDemo, sourceDirectory: "globalPipelineDemo/globalPipelineDemo/bin/Release/netcoreapp3.1/publibat/""""  
        // }  
     }
     post {  

@@ -7,7 +7,7 @@
   <HasBeginStepCommandLineCredentials>false</HasBeginStepCommandLineCredentials>
   <SonarQubeHostUrl>http://localhost:9000</SonarQubeHostUrl>
   <SonarQubeVersion>8.4.2.36762</SonarQubeVersion>
-  <SonarProjectKey>EvenCheck.tests</SonarProjectKey>
+  <SonarProjectKey>EvenCheck</SonarProjectKey>
   <AdditionalConfig>
     <ConfigSetting Id="BuildUri" />
     <ConfigSetting Id="TfsUri" />
@@ -102,7 +102,8 @@
   </ServerSettings>
   <LocalSettings>
     <Property Name="sonar.host.url">http://localhost:9000</Property>
-    <Property Name="sonar.cs.opencover.reportsPaths">.\EvenCheck.Tests\coverage.opencover.xml</Property>
+    <Property Name="sonar.cs.opencover.reportsPaths">./EvenCheck.tests/coverage.opencover.xml</Property>
+    <Property Name="sonar.coverage.exclusions">**Test*.cs</Property>
   </LocalSettings>
   <AnalyzersSettings>
     <AnalyzerSettings>

@@ -2,9 +2,9 @@
 <CoverageSession>
   <Summary numSequencePoints="5" visitedSequencePoints="5" numBranchPoints="2" visitedBranchPoints="2" sequenceCoverage="100" branchCoverage="100" maxCyclomaticComplexity="2" minCyclomaticComplexity="2" visitedClasses="1" numClasses="1" visitedMethods="1" numMethods="1" />
   <Modules>
-    <Module hash="BBCFD207-65CB-4D49-A442-9A7210D49451">
+    <Module hash="5A618F38-CDB7-4C0B-909E-FB7A79CE75FD">
       <ModulePath>EvenCheck.dll</ModulePath>
-      <ModuleTime>2020-09-17T03:40:00</ModuleTime>
+      <ModuleTime>2020-09-19T08:44:49</ModuleTime>
       <ModuleName>EvenCheck</ModuleName>
       <Files>
         <File uid="1" fullPath="C:\Users\miljolly\Desktop\Sapient_Courses-master\seconddotnetproject\EvenCheck\IsEven.cs" />

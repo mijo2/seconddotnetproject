@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>EvenCheck</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>c4c87ddf-04cb-42e4-aa73-02182aaf970e</ProjectGuid>
+  <FullPath>C:\Users\miljolly\Desktop\Sapient_Courses-master\seconddotnetproject\EvenCheck\EvenCheck.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\miljolly\Desktop\Sapient_Courses-master\seconddotnetproject\.sonarqube\out\4\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePath">C:\Users\miljolly\Desktop\Sapient_Courses-master\seconddotnetproject\EvenCheck\bin\Debug\netstandard2.0\EvenCheck.dll.RoslynCA.json|C:\Users\miljolly\Desktop\Sapient_Courses-master\seconddotnetproject\EvenCheck\bin\Debug\netstandard2.0\EvenCheck.dll.RoslynCA.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPath">C:\Users\miljolly\Desktop\Sapient_Courses-master\seconddotnetproject\.sonarqube\out\4</Property>
+  </AnalysisSettings>
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+  <TargetFramework>netstandard2.0</TargetFramework>
+</ProjectInfo>
