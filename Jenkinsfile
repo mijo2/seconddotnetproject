@@ -63,9 +63,7 @@ pipeline {
        //     resourceGroup: params.res_group, appName: params.globalPipelineDemo, sourceDirectory: "globalPipelineDemo/globalPipelineDemo/bin/Release/netcoreapp3.1/publibat/""""  
        // }  
     }
-    def cmd_exec(command) {
-    return bat(returnStdout: true, script: "${command}").trim()
-    }
+
     post {  
         always {  
             echo 'Build Result:'  
@@ -78,4 +76,8 @@ pipeline {
             //mail bcc: '', body: "<b>Example</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR CI: Project name - ${env.JOB_NAME}", to: "vatssatyarth11@gmail.com";  
         }    
     }
+}
+
+def cmd_exec(command) {
+return bat(returnStdout: true, script: "${command}").trim()
 }
