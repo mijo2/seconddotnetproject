@@ -14,6 +14,7 @@ pipeline {
         stage('Test') {
             steps {
                 bat "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover ./EvenCheck.Tests/"
+                bat "type ./EvenCheck.Tests/coverage.opencover.xml"
             
             }
         }

@@ -102,7 +102,7 @@
   </ServerSettings>
   <LocalSettings>
     <Property Name="sonar.coverage.exclusions">**Test*.cs</Property>
-    <Property Name="sonar.cs.opencover.reportsPaths">.\\EvenCheck.tests\\coverage.opencover.xml</Property>
+    <Property Name="sonar.cs.opencover.reportsPaths">./EvenCheck.tests/coverage.opencover.xml</Property>
     <Property Name="sonar.host.url">http://localhost:9000</Property>
   </LocalSettings>
   <AnalyzersSettings>
