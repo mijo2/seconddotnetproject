@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover {WORKSPACE}/"
+                bat "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover ${WORKSPACE}/"
             
             }
         }
