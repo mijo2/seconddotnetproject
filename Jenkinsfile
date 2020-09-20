@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Clean'){
             steps{
-                bat "dotnet clean"
+                bat "dotnet clean" // For fixing the 0 code coverage issue in Sonarqube
             }
         }
         stage('Build') {

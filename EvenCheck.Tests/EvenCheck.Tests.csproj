@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <IsPackable>false</IsPackable>
-    <ProjectGuid>{10416E23-1D65-464B-93B6-90CCA8D65EC2}</ProjectGuid>
+    <ProjectGuid>{85fe044e-b6f5-4185-a171-1adac3b382a4}</ProjectGuid>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0"/>
