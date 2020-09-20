@@ -6,6 +6,11 @@ pipeline {
                 checkout scm
             }
         }
+        stage('Clean'){
+            steps{
+                bat "dotnet clean"
+            }
+        }
         stage('Build') {
             steps {
                 bat "dotnet build Solution.sln"
