@@ -19,14 +19,13 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover ./EvenCheck.Tests/"
+                bat "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover {WORKSPACE}/"
             
             }
         }
         stage('SonarQube') {
             steps {
                 withSonarQubeEnv('SonarQube') {
-                    cmd_exec("move ${WORKSPACE}/EvenCheck.Tests/coverage.opencover.xml ${WORKSPACE}/")
                     bat "dotnet build-server shutdown"
                     bat """dotnet sonarscanner begin /k:EvenCheck /d:sonar.coverage.exclusions="**Test*.cs" /d:sonar.exclusions=**/spec/api.json /d:sonar.cs.opencover.reportsPaths="${WORKSPACE}/coverage.opencover.xml" /d:sonar.login="9a7d44bd8e34829c6e5e9ab35a2ad6613da4f21c" /d:sonar.host.url=http://localhost:9000"""
                     bat "dotnet build Solution.sln"
@@ -79,5 +78,5 @@ pipeline {
 }
 
 def cmd_exec(command) {
-return bat(returnStdout: true, script: "${command}").trim()
+    return bat(returnStdout: true, script: "${command}").trim()
 }
