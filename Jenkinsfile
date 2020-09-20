@@ -26,7 +26,7 @@ pipeline {
         stage('SonarQube') {
             steps {
                 withSonarQubeEnv('SonarQube') {
-                    bat "move ${WORKSPACE}/EvenCheck.Tests/coverage.opencover.xml ${WORKSPACE}/"
+                    cmd_exec("move ${WORKSPACE}/EvenCheck.Tests/coverage.opencover.xml ${WORKSPACE}/")
                     bat "dotnet build-server shutdown"
                     bat """dotnet sonarscanner begin /k:EvenCheck /d:sonar.coverage.exclusions="**Test*.cs" /d:sonar.exclusions=**/spec/api.json /d:sonar.cs.opencover.reportsPaths="${WORKSPACE}/coverage.opencover.xml" /d:sonar.login="9a7d44bd8e34829c6e5e9ab35a2ad6613da4f21c" /d:sonar.host.url=http://localhost:9000"""
                     bat "dotnet build Solution.sln"
@@ -62,6 +62,9 @@ pipeline {
        //    bat """azureWebAppPublibat azureCredentialsId: params.azure_cred_id,  
        //     resourceGroup: params.res_group, appName: params.globalPipelineDemo, sourceDirectory: "globalPipelineDemo/globalPipelineDemo/bin/Release/netcoreapp3.1/publibat/""""  
        // }  
+    }
+    def cmd_exec(command) {
+    return bat(returnStdout: true, script: "${command}").trim()
     }
     post {  
         always {  
