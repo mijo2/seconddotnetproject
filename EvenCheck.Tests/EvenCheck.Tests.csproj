@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>netcoreapp3.2</TargetFramework>
     <IsPackable>false</IsPackable>
     <ProjectGuid>{10416E23-1D65-464B-93B6-90CCA8D65EC2}</ProjectGuid>
   </PropertyGroup>
