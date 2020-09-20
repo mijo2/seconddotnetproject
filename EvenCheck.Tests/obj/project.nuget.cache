@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "g0prFRZNPyuc3+VK6sPjW7x2PSTcYjZ7F3selEQLl1WHrpKEF7NXeT+LJEyXOhlSt6uhDKZjICCRPqDFW34lNw==",
+  "dgSpecHash": "CB4E2kGs49bAuGeqgHJwxpQhtjK7zjU90nafBh/AOOdmuhWQ6IIRLPt8PzNPdAurOGhkM2gGnFib51Npa6nJPQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\miljolly\\Desktop\\Sapient_Courses-master\\seconddotnetproject\\EvenCheck.Tests\\EvenCheck.Tests.csproj",
   "expectedPackageFiles": [
@@ -10,8 +10,8 @@
     "C:\\Users\\miljolly\\.nuget\\packages\\microsoft.net.test.sdk\\16.5.0\\microsoft.net.test.sdk.16.5.0.nupkg.sha512",
     "C:\\Users\\miljolly\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",
     "C:\\Users\\miljolly\\.nuget\\packages\\microsoft.netcore.targets\\1.0.1\\microsoft.netcore.targets.1.0.1.nupkg.sha512",
-    "C:\\Users\\miljolly\\.nuget\\packages\\microsoft.testplatform.objectmodel\\16.7.1\\microsoft.testplatform.objectmodel.16.7.1.nupkg.sha512",
-    "C:\\Users\\miljolly\\.nuget\\packages\\microsoft.testplatform.testhost\\16.7.1\\microsoft.testplatform.testhost.16.7.1.nupkg.sha512",
+    "C:\\Users\\miljolly\\.nuget\\packages\\microsoft.testplatform.objectmodel\\16.7.0\\microsoft.testplatform.objectmodel.16.7.0.nupkg.sha512",
+    "C:\\Users\\miljolly\\.nuget\\packages\\microsoft.testplatform.testhost\\16.7.0\\microsoft.testplatform.testhost.16.7.0.nupkg.sha512",
     "C:\\Users\\miljolly\\.nuget\\packages\\msbuild.sonarqube.runner.tool\\4.8.0\\msbuild.sonarqube.runner.tool.4.8.0.nupkg.sha512",
     "C:\\Users\\miljolly\\.nuget\\packages\\newtonsoft.json\\9.0.1\\newtonsoft.json.9.0.1.nupkg.sha512",
     "C:\\Users\\miljolly\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",

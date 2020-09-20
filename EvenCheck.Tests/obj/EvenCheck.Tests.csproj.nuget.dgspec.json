@@ -50,7 +50,7 @@
             },
             "Microsoft.TestPlatform.TestHost": {
               "target": "Package",
-              "version": "[16.7.1, )"
+              "version": "[16.7.0, )"
             },
             "coverlet.msbuild": {
               "target": "Package",

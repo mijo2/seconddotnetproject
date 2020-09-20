@@ -11,7 +11,7 @@
           "EvenCheck": "1.0.0",
           "MSBuild.SonarQube.Runner.Tool": "4.8.0",
           "Microsoft.NET.Test.Sdk": "16.5.0",
-          "Microsoft.TestPlatform.TestHost": "16.7.1",
+          "Microsoft.TestPlatform.TestHost": "16.7.0",
           "coverlet.msbuild": "2.9.0",
           "xunit": "2.4.0",
           "xunit.runner.visualstudio": "2.4.0"
@@ -52,12 +52,12 @@
       "Microsoft.NET.Test.Sdk/16.5.0": {
         "dependencies": {
           "Microsoft.CodeCoverage": "16.5.0",
-          "Microsoft.TestPlatform.TestHost": "16.7.1"
+          "Microsoft.TestPlatform.TestHost": "16.7.0"
         }
       },
       "Microsoft.NETCore.Platforms/1.0.1": {},
       "Microsoft.NETCore.Targets/1.0.1": {},
-      "Microsoft.TestPlatform.ObjectModel/16.7.1": {
+      "Microsoft.TestPlatform.ObjectModel/16.7.0": {
         "dependencies": {
           "NuGet.Frameworks": "5.0.0"
         },
@@ -156,9 +156,9 @@
           }
         }
       },
-      "Microsoft.TestPlatform.TestHost/16.7.1": {
+      "Microsoft.TestPlatform.TestHost/16.7.0": {
         "dependencies": {
-          "Microsoft.TestPlatform.ObjectModel": "16.7.1",
+          "Microsoft.TestPlatform.ObjectModel": "16.7.0",
           "Newtonsoft.Json": "9.0.1"
         },
         "runtime": {
@@ -747,19 +747,19 @@
       "path": "microsoft.netcore.targets/1.0.1",
       "hashPath": "microsoft.netcore.targets.1.0.1.nupkg.sha512"
     },
-    "Microsoft.TestPlatform.ObjectModel/16.7.1": {
+    "Microsoft.TestPlatform.ObjectModel/16.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-FL+VpAC/nCCzj80MwX6L8gJD06u2m1SKcQQLAymDLFqNtgtI9h3J5n0mVN+s18qcMzybsmO9GK7rMuHYx11KMg==",
-      "path": "microsoft.testplatform.objectmodel/16.7.1",
-      "hashPath": "microsoft.testplatform.objectmodel.16.7.1.nupkg.sha512"
+      "sha512": "sha512-1/49rMeZXCdlAd0bCBcL6zicQm+lCNOW5N0d7DdNUdtFASCWTQ2u8MauoFT3zwYsZDcC/3q6zLnt723EGeQwZg==",
+      "path": "microsoft.testplatform.objectmodel/16.7.0",
+      "hashPath": "microsoft.testplatform.objectmodel.16.7.0.nupkg.sha512"
     },
-    "Microsoft.TestPlatform.TestHost/16.7.1": {
+    "Microsoft.TestPlatform.TestHost/16.7.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-mv7MnBDtqwQAjoH+AphE+Tu0dsF6x/c7Zs8umkb2McbvNALJdfBuWJQbiXGWqhNq7k8eMmnkNO6klJz4pkgekw==",
-      "path": "microsoft.testplatform.testhost/16.7.1",
-      "hashPath": "microsoft.testplatform.testhost.16.7.1.nupkg.sha512"
+      "sha512": "sha512-5yWCRl3oI6Hj9ikgthc/QoyvwUD7CbWnZZjgm8jqZ4HZawAEDNpXLRjYkhWAtZ/sOfbC7lFSV1Pmk87FmNxuSA==",
+      "path": "microsoft.testplatform.testhost/16.7.0",
+      "hashPath": "microsoft.testplatform.testhost.16.7.0.nupkg.sha512"
     },
     "MSBuild.SonarQube.Runner.Tool/4.8.0": {
       "type": "package",
