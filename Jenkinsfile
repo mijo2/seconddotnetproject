@@ -14,12 +14,12 @@ pipeline {
         stage('Build') {
             steps {
                 bat "dotnet clean"
-                bat "dotnet build"
+                bat "dotnet build Solution.sln"
             }
         }
         stage('Test') {
             steps {
-                bat "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover ./EvenCheck.Tests/"
+                bat "dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover"
             
             }
         }
@@ -28,7 +28,7 @@ pipeline {
                 withSonarQubeEnv('SonarQube') {
                   
                     bat "dotnet build-server shutdown"
-                    bat """dotnet sonarscanner begin /k:EvenCheck /d:sonar.coverage.exclusions="**Test*.cs" /d:sonar.cs.opencover.reportsPaths="./EvenCheck.tests/coverage.opencover.xml" /d:sonar.login="9a7d44bd8e34829c6e5e9ab35a2ad6613da4f21c" /d:sonar.host.url=http://localhost:9000"""
+                    bat """dotnet sonarscanner begin /k:EvenCheck /d:sonar.coverage.exclusions="**Test*.cs" /d:sonar.cs.opencover.reportsPaths="EvenCheck.tests/coverage.opencover.xml" /d:sonar.login="9a7d44bd8e34829c6e5e9ab35a2ad6613da4f21c" /d:sonar.host.url=http://localhost:9000"""
                     bat "dotnet build Solution.sln"
                     bat """dotnet sonarscanner end /d:sonar.login="9a7d44bd8e34829c6e5e9ab35a2ad6613da4f21c""" // Works with one quote out
                     
