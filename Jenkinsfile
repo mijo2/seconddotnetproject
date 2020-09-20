@@ -6,13 +6,14 @@ pipeline {
                 checkout scm
             }
         }
-        stage('Clean'){
-            steps{
-                bat "dotnet clean" // For fixing the 0 code coverage issue in Sonarqube
-            }
-        }
+        // stage('Clean'){
+        //    steps{
+        //        bat "dotnet clean" // For fixing the 0 code coverage issue in Sonarqube
+        //    }
+        // }
         stage('Build') {
             steps {
+                bat "dotnet clean"
                 bat "dotnet build Solution.sln"
             }
         }
